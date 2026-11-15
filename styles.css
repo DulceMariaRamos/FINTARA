@@ -1209,3 +1209,166 @@ legend span {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================================
+   BUSINESS FUNDING PROGRESS
+   ========================================================= */
+
+.funding-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.8fr);
+  gap: 20px;
+  align-items: start;
+  padding-bottom: 56px;
+}
+
+.funding-card {
+  padding: 30px 32px;
+  border: 1px solid #eaede8;
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: 0 8px 28px rgba(29, 56, 45, 0.035);
+}
+
+.funding-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.funding-header h2 {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.funding-status {
+  padding: 7px 10px;
+  border: 1px solid #cfe3d4;
+  border-radius: 999px;
+  color: #285b43;
+  background: #f2f8f2;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.funding-main-number {
+  margin-bottom: 18px;
+}
+
+.funding-main-number > span {
+  display: block;
+  margin-bottom: 6px;
+  color: #8b9891;
+  font-size: 10px;
+}
+
+.funding-main-number strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 34px;
+  letter-spacing: -1px;
+}
+
+.funding-main-number p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.funding-progress-bar {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e8ece8;
+}
+
+.funding-progress-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+  transition: width 500ms ease;
+}
+
+.funding-percentage-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.funding-percentage-row strong {
+  color: var(--green-dark);
+}
+
+.funding-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 26px 0;
+}
+
+.funding-metric {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fafbf8;
+}
+
+.funding-metric span {
+  display: block;
+  margin-bottom: 6px;
+  color: #89958f;
+  font-size: 9px;
+}
+
+.funding-metric strong {
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.funding-note {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 13px;
+  border: 1px solid #e2e9dc;
+  border-radius: 8px;
+  background: #f8faf7;
+}
+
+.funding-note p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+@media (max-width: 780px) {
+  .funding-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .funding-card {
+    padding: 23px 18px;
+  }
+
+  .funding-header {
+    display: block;
+  }
+
+  .funding-status {
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  .funding-metrics {
+    grid-template-columns: 1fr;
+  }
+}

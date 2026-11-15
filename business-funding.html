@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f3">
+
+    <title>FINTARA | Progreso de fondeo</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js" defer></script>
+    <script src="business-funding.js" defer></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+      <a class="brand" href="index.html" aria-label="FINTARA, inicio">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>fintara</span>
+      </a>
+
+      <span class="demo-label">
+        <span aria-hidden="true"></span>
+        Demo Mode
+      </span>
+
+    </header>
+
+
+    <main>
+
+      <section class="intro">
+
+        <p class="eyebrow">FONDEO DEL PROYECTO</p>
+
+        <h1>Tu proyecto está recibiendo inversión.</h1>
+
+        <p class="intro-copy">
+          Consulta el avance del fondeo de tu solicitud dentro de esta simulación.
+        </p>
+
+      </section>
+
+
+      <nav class="progress" aria-label="Avance del financiamiento">
+
+        <div class="progress-step progress-step-active">
+          <span class="step-number">1</span>
+          <span>Solicitud</span>
+        </div>
+
+        <span class="progress-line" aria-hidden="true"></span>
+
+        <div class="progress-step progress-step-active">
+          <span class="step-number">2</span>
+          <span>Fondeo</span>
+        </div>
+
+        <span class="progress-line" aria-hidden="true"></span>
+
+        <div class="progress-step">
+          <span class="step-number">3</span>
+          <span>Repago</span>
+        </div>
+
+      </nav>
+
+
+      <div class="funding-layout">
+
+        <section class="funding-card">
+
+          <div class="funding-header">
+
+            <div>
+              <p class="eyebrow">PROGRESO DE FONDEO</p>
+              <h2>Tu meta está avanzando.</h2>
+            </div>
+
+            <span class="funding-status">
+              En fondeo
+            </span>
+
+          </div>
+
+
+          <div class="funding-main-number">
+
+            <span>Monto fondeado</span>
+
+            <strong id="funded-amount">
+              —
+            </strong>
+
+            <p>
+              de <span id="funding-target">—</span>
+            </p>
+
+          </div>
+
+
+          <div class="funding-progress-bar">
+
+            <div
+              id="funding-progress-fill"
+              class="funding-progress-fill"
+            ></div>
+
+          </div>
+
+
+          <div class="funding-percentage-row">
+
+            <span>Avance</span>
+
+            <strong id="funding-percentage">
+              —
+            </strong>
+
+          </div>
+
+
+          <div class="funding-metrics">
+
+            <div class="funding-metric">
+
+              <span>Monto restante</span>
+
+              <strong id="remaining-amount">
+                —
+              </strong>
+
+            </div>
+
+
+            <div class="funding-metric">
+
+              <span>Inversionistas</span>
+
+              <strong id="investor-count">
+                —
+              </strong>
+
+            </div>
+
+
+            <div class="funding-metric">
+
+              <span>Plazo</span>
+
+              <strong id="funding-term">
+                —
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="funding-note">
+
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <p>
+              <strong>Demo Mode.</strong>
+              El avance mostrado utiliza inversionistas y movimientos ficticios.
+              No se está recibiendo dinero real.
+            </p>
+
+          </div>
+
+
+          <button
+            id="complete-funding-button"
+            class="submit-button"
+            type="button"
+          >
+            Simular fondeo completo
+            <span aria-hidden="true">→</span>
+          </button>
+
+        </section>
+
+
+        <aside class="side-panel">
+
+          <p class="eyebrow">TU PROYECTO</p>
+
+          <h2 id="funding-business-name">
+            Proyecto de financiamiento
+          </h2>
+
+          <p id="funding-purpose">
+            —
+          </p>
+
+          <div class="side-divider"></div>
+
+          <div class="side-note">
+
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <p>
+              El fondeo mostrado es únicamente una simulación académica.
+              Los inversionistas utilizados en esta pantalla son ficticios.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+      <span>
+        FINTARA
+        <span aria-hidden="true">·</span>
+        Proyecto académico
+      </span>
+
+      <span>Sin movimiento de dinero real</span>
+
+    </footer>
+
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        requireRole("business");
+      });
+    </script>
+
+  </body>
+</html>
