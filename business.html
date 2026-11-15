@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f3">
+    <title>FINTARA | Solicitud de financiamiento</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="FINTARA, inicio">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>fintara</span>
+      </a>
+      <span class="demo-label"><span aria-hidden="true"></span> Prototipo académico</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">FINANCIAMIENTO PARA TU NEGOCIO</p>
+        <h1 id="page-title">Dale espacio a lo que sigue.</h1>
+        <p class="intro-copy">
+          Cuéntanos sobre tu negocio y el proyecto que quieres impulsar.
+          Organizaremos la información para dar el siguiente paso.
+        </p>
+      </section>
+
+      <nav class="progress" aria-label="Avance de la solicitud">
+        <div class="progress-step progress-step-active" aria-current="step">
+          <span class="step-number">1</span>
+          <span>Tu solicitud</span>
+        </div>
+        <span class="progress-line" aria-hidden="true"></span>
+        <div class="progress-step">
+          <span class="step-number">2</span>
+          <span>Revisión</span>
+        </div>
+        <span class="progress-line" aria-hidden="true"></span>
+        <div class="progress-step">
+          <span class="step-number">3</span>
+          <span>Oportunidad</span>
+        </div>
+      </nav>
+
+      <div class="content-grid">
+        <section class="form-card" aria-labelledby="form-title">
+          <div class="card-heading">
+            <div>
+              <p class="eyebrow">PASO 1 DE 3</p>
+              <h2 id="form-title">Cuéntanos de tu proyecto</h2>
+              <p class="section-copy">Completa los datos básicos para registrar tu solicitud.</p>
+            </div>
+            <span class="lock-badge"><span aria-hidden="true">●</span> Datos de demostración</span>
+          </div>
+
+          <form id="financing-form">
+            <fieldset>
+              <legend><span>01</span> Tu negocio</legend>
+              <div class="field-grid">
+                <label class="field field-full" for="business-name">
+                  Nombre del negocio
+                  <input id="business-name" name="businessName" type="text" autocomplete="organization" placeholder="Ej. Carpintodo" required maxlength="100">
+                </label>
+                <label class="field" for="owner-name">
+                  Nombre de la persona propietaria
+                  <input id="owner-name" name="ownerName" type="text" autocomplete="name" placeholder="Nombre completo" required maxlength="120">
+                </label>
+                <label class="field" for="business-activity">
+                  Actividad del negocio
+                  <input id="business-activity" name="businessActivity" type="text" placeholder="Ej. Comercio de ferretería" required maxlength="120">
+                </label>
+                <label class="field field-full" for="location">
+                  Ubicación principal
+                  <input id="location" name="location" type="text" autocomplete="address-level2" placeholder="Ciudad y estado" required maxlength="120">
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend><span>02</span> Lo que quieres lograr</legend>
+              <div class="field-grid">
+                <label class="field" for="amount">
+                  Monto que necesitas
+                  <span class="input-prefix">
+                    <span aria-hidden="true">$</span>
+                    <input id="amount" name="amountMxn" type="number" inputmode="numeric" min="1" step="1" placeholder="100,000" required>
+                  </span>
+                  <span class="field-hint">Pesos mexicanos (MXN)</span>
+                </label>
+                <label class="field" for="term">
+                  Plazo estimado
+                  <span class="input-suffix">
+                    <input id="term" name="termMonths" type="number" inputmode="numeric" min="1" step="1" placeholder="12" required>
+                    <span>meses</span>
+                  </span>
+                </label>
+                <label class="field field-full" for="purpose">
+                  ¿Para qué usarás el financiamiento?
+                  <input id="purpose" name="purpose" type="text" placeholder="Ej. Ampliar la capacidad de mi almacén" required maxlength="180">
+                </label>
+                <label class="field field-full" for="description">
+                  Describe brevemente tu proyecto
+                  <textarea id="description" name="projectDescription" rows="4" placeholder="¿Qué cambiará en tu negocio con este proyecto?" required maxlength="1000"></textarea>
+                  <span class="field-hint">Hasta 1,000 caracteres.</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div id="form-message" class="form-message" role="status" aria-live="polite" hidden></div>
+            <button class="submit-button" type="submit">
+              Registrar mi solicitud
+              <span aria-hidden="true">→</span>
+            </button>
+            <p class="form-footnote">No necesitas realizar ningún pago para enviar esta solicitud de demostración.</p>
+          </form>
+        </section>
+
+        <aside class="side-panel" aria-label="Información de la solicitud">
+          <div class="side-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M8 36.5V20.2L24 9l16 11.2v16.3H8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M18 36.5V25h12v11.5M15.5 19h.1M24 19h.1M32.5 19h.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="eyebrow">UN BUEN COMIENZO</p>
+          <h2>Tu negocio tiene una historia que contar.</h2>
+          <p>La información que compartas nos ayudará a presentar tu proyecto de forma clara a posibles inversionistas.</p>
+          <div class="side-divider"></div>
+          <div class="side-note">
+            <span class="note-icon" aria-hidden="true">i</span>
+            <p><strong>Esto es una simulación.</strong> No se otorgan créditos ni se reciben inversiones reales. Cualquier operación futura sería realizada por una institución autorizada.</p>
+          </div>
+          <div class="side-steps">
+            <div><span>01</span><p>Comparte los datos de tu negocio</p></div>
+            <div><span>02</span><p>Preparamos la información del proyecto</p></div>
+            <div><span>03</span><p>Conoce los siguientes pasos</p></div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>FINTARA <span aria-hidden="true">·</span> Proyecto académico</span>
+      <span>Sin movimiento de dinero real</span>
+    </footer>
+  </body>
+</html>
