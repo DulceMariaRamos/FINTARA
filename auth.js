@@ -66,3 +66,39 @@ loginForm.addEventListener("submit", (event) => {
   saveSession(user);
   redirectUser(user);
 });
+function getCurrentSession() {
+  const savedSession = sessionStorage.getItem(SESSION_KEY);
+
+  if (!savedSession) {
+    return null;
+  }
+
+  try {
+    return JSON.parse(savedSession);
+  } catch {
+    return null;
+  }
+}
+
+function requireRole(requiredRole) {
+  const session = getCurrentSession();
+
+  if (!session) {
+    window.location.href = "login.html";
+    return;
+  }
+
+  if (session.role !== requiredRole) {
+    if (session.role === "business") {
+      window.location.href = "business.html";
+      return;
+    }
+
+    if (session.role === "investor") {
+      window.location.href = "investor.html";
+      return;
+    }
+
+    window.location.href = "login.html";
+  }
+}
