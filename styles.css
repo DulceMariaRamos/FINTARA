@@ -1372,3 +1372,167 @@ legend span {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================================
+   BUSINESS FUNDING COMPLETED
+   ========================================================= */
+
+.funded-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.8fr);
+  gap: 20px;
+  align-items: start;
+  padding-bottom: 56px;
+}
+
+.funded-card {
+  padding: 30px 32px;
+  border: 1px solid #eaede8;
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: 0 8px 28px rgba(29, 56, 45, 0.035);
+}
+
+.funded-success-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  color: white;
+  background: var(--green);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.funded-status {
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 7px 10px;
+  border: 1px solid #cfe3d4;
+  border-radius: 999px;
+  color: #285b43;
+  background: #f2f8f2;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.funded-card h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.funded-copy {
+  max-width: 620px;
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.funded-total {
+  margin-bottom: 17px;
+}
+
+.funded-total span {
+  display: block;
+  margin-bottom: 6px;
+  color: #89958f;
+  font-size: 10px;
+}
+
+.funded-total strong {
+  color: var(--ink);
+  font-size: 34px;
+  letter-spacing: -1px;
+}
+
+.funded-progress-bar {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e8ece8;
+}
+
+.funded-progress-fill {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+}
+
+.funded-progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.funded-progress-label strong {
+  color: var(--green-dark);
+}
+
+.funded-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 26px 0;
+}
+
+.funded-metric {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fafbf8;
+}
+
+.funded-metric span {
+  display: block;
+  margin-bottom: 6px;
+  color: #89958f;
+  font-size: 9px;
+}
+
+.funded-metric strong {
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.funded-next-step {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fafbf8;
+}
+
+.funded-next-step h3 {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.funded-next-step p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+@media (max-width: 780px) {
+  .funded-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .funded-card {
+    padding: 23px 18px;
+  }
+
+  .funded-metrics {
+    grid-template-columns: 1fr;
+  }
+}

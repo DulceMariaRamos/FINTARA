@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f3">
+
+    <title>FINTARA | Fondeo completado</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js" defer></script>
+    <script src="business-funded.js" defer></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+      <a class="brand" href="index.html" aria-label="FINTARA, inicio">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>fintara</span>
+      </a>
+
+      <span class="demo-label">
+        <span aria-hidden="true"></span>
+        Demo Mode
+      </span>
+
+    </header>
+
+
+    <main>
+
+      <section class="intro">
+
+        <p class="eyebrow">FONDEO COMPLETADO</p>
+
+        <h1>Tu proyecto alcanzó la meta.</h1>
+
+        <p class="intro-copy">
+          El proyecto fue fondeado al 100% dentro de esta simulación académica.
+        </p>
+
+      </section>
+
+
+      <nav class="progress" aria-label="Avance del financiamiento">
+
+        <div class="progress-step progress-step-active">
+          <span class="step-number">1</span>
+          <span>Solicitud</span>
+        </div>
+
+        <span class="progress-line" aria-hidden="true"></span>
+
+        <div class="progress-step progress-step-active">
+          <span class="step-number">2</span>
+          <span>Fondeo</span>
+        </div>
+
+        <span class="progress-line" aria-hidden="true"></span>
+
+        <div class="progress-step">
+          <span class="step-number">3</span>
+          <span>Repago</span>
+        </div>
+
+      </nav>
+
+
+      <div class="funded-layout">
+
+        <section class="funded-card">
+
+          <div class="funded-success-icon" aria-hidden="true">
+            ✓
+          </div>
+
+          <span class="funded-status">
+            100% fondeado
+          </span>
+
+          <p class="eyebrow">META ALCANZADA</p>
+
+          <h2>El fondeo de tu proyecto está completo.</h2>
+
+          <p class="funded-copy">
+            La meta de financiamiento fue alcanzada mediante inversiones
+            simuladas dentro del entorno de demostración de FINTARA.
+          </p>
+
+
+          <div class="funded-total">
+
+            <span>Total fondeado</span>
+
+            <strong id="completed-funded-amount">
+              —
+            </strong>
+
+          </div>
+
+
+          <div class="funded-progress-bar">
+            <div class="funded-progress-fill"></div>
+          </div>
+
+          <div class="funded-progress-label">
+            <span>Meta alcanzada</span>
+            <strong>100%</strong>
+          </div>
+
+
+          <div class="funded-metrics">
+
+            <div class="funded-metric">
+              <span>Meta</span>
+              <strong id="completed-target">—</strong>
+            </div>
+
+            <div class="funded-metric">
+              <span>Inversionistas simulados</span>
+              <strong id="completed-investors">—</strong>
+            </div>
+
+            <div class="funded-metric">
+              <span>Plazo</span>
+              <strong id="completed-term">—</strong>
+            </div>
+
+          </div>
+
+
+          <div class="funded-next-step">
+
+            <p class="eyebrow">¿QUÉ SIGUE?</p>
+
+            <h3>Preparación del desembolso y plan de pagos</h3>
+
+            <p>
+              En una operación real, el desembolso y las actividades reguladas
+              serían gestionadas por la institución autorizada correspondiente.
+              En este MVP, el proceso se muestra únicamente de forma simulada.
+            </p>
+
+          </div>
+
+
+          <div class="funding-note">
+
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <p>
+              <strong>Demo Mode.</strong>
+              No se transfirió dinero real y las inversiones mostradas son
+              completamente ficticias.
+            </p>
+
+          </div>
+
+
+          <button
+            id="view-repayment-button"
+            class="submit-button"
+            type="button"
+          >
+            Ver plan de pagos
+            <span aria-hidden="true">→</span>
+          </button>
+
+        </section>
+
+
+        <aside class="side-panel">
+
+          <p class="eyebrow">PROYECTO FONDEADO</p>
+
+          <h2 id="completed-business-name">
+            Proyecto de financiamiento
+          </h2>
+
+          <p id="completed-purpose">
+            —
+          </p>
+
+          <div class="side-divider"></div>
+
+          <div class="side-note">
+
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <p>
+              La confirmación de fondeo forma parte del flujo de demostración
+              y no representa una operación financiera real.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+      <span>
+        FINTARA
+        <span aria-hidden="true">·</span>
+        Proyecto académico
+      </span>
+
+      <span>Sin movimiento de dinero real</span>
+
+    </footer>
+
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        requireRole("business");
+      });
+    </script>
+
+  </body>
+</html>
