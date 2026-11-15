@@ -1072,3 +1072,140 @@ legend span {
     width: 100%;
   }
 }
+/* =========================================================
+   BUSINESS PROJECT STATUS
+   ========================================================= */
+
+.status-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.8fr);
+  gap: 20px;
+  align-items: start;
+  padding-bottom: 56px;
+}
+
+.status-card {
+  padding: 30px 32px;
+  border: 1px solid #eaede8;
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: 0 8px 28px rgba(29, 56, 45, 0.035);
+}
+
+.status-badge {
+  width: fit-content;
+  margin-bottom: 18px;
+  padding: 7px 10px;
+  border: 1px solid #eadcbf;
+  border-radius: 999px;
+  color: #8a651f;
+  background: #fff9ec;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.status-card h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.status-copy {
+  max-width: 620px;
+  margin-bottom: 25px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.status-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 27px;
+}
+
+.status-summary-item {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fafbf8;
+}
+
+.status-summary-item span {
+  display: block;
+  margin-bottom: 5px;
+  color: #8b9891;
+  font-size: 9px;
+}
+
+.status-summary-item strong {
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.status-process {
+  margin-bottom: 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.status-process h3 {
+  margin: 0 0 18px;
+  font-size: 13px;
+}
+
+.status-step {
+  display: flex;
+  gap: 13px;
+  margin-bottom: 17px;
+}
+
+.status-step-icon {
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #dce2dd;
+  border-radius: 50%;
+  color: #738079;
+  background: white;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.status-step-current {
+  border-color: var(--green);
+  color: white;
+  background: var(--green);
+}
+
+.status-step strong {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--ink);
+  font-size: 11px;
+}
+
+.status-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+@media (max-width: 780px) {
+  .status-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .status-card {
+    padding: 23px 18px;
+  }
+
+  .status-summary {
+    grid-template-columns: 1fr;
+  }
+}
