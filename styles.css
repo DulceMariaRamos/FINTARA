@@ -896,3 +896,82 @@ legend span {
     font-size: 22px;
   }
 }
+/* =========================================================
+   LOGIN
+   ========================================================= */
+
+.login-main {
+  width: min(520px, calc(100% - 32px));
+  min-height: calc(100vh - 130px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+}
+
+.login-card {
+  width: 100%;
+  padding: 34px;
+  border: 1px solid #e3e9e3;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 18px 50px rgba(29, 56, 45, 0.06);
+}
+
+.login-card h1 {
+  margin-bottom: 12px;
+  font-size: 34px;
+}
+
+.login-description {
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.login-card form {
+  display: grid;
+  gap: 18px;
+}
+
+.demo-accounts {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.demo-account {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.demo-account strong {
+  color: var(--ink);
+}
+
+.demo-account-note {
+  margin: 12px 0 0;
+  color: #8b9891;
+  font-size: 10px;
+}
+
+@media (max-width: 540px) {
+  .login-card {
+    padding: 25px 20px;
+  }
+
+  .login-card h1 {
+    font-size: 30px;
+  }
+
+  .demo-account {
+    display: grid;
+    gap: 4px;
+  }
+}

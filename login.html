@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f3">
+
+    <title>FINTARA | Iniciar sesión</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js" defer></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+      <a class="brand" href="index.html" aria-label="FINTARA, inicio">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>fintara</span>
+      </a>
+
+      <span class="demo-label">
+        <span aria-hidden="true"></span>
+        Demo Mode
+      </span>
+
+    </header>
+
+
+    <main class="login-main">
+
+      <section class="login-card">
+
+        <p class="eyebrow">ACCESO DE DEMOSTRACIÓN</p>
+
+        <h1>Inicia sesión en FINTARA</h1>
+
+        <p class="login-description">
+          Usa una cuenta de prueba para entrar al flujo correspondiente.
+        </p>
+
+
+        <form id="login-form">
+
+          <label class="field" for="email">
+            Correo
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="correo@demo.com"
+              required
+            >
+          </label>
+
+          <label class="field" for="password">
+            Contraseña
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Contraseña"
+              required
+            >
+          </label>
+
+          <div
+            id="login-message"
+            class="form-message form-message-error"
+            role="alert"
+            hidden
+          ></div>
+
+          <button class="submit-button" type="submit">
+            Iniciar sesión
+            <span aria-hidden="true">→</span>
+          </button>
+
+        </form>
+
+
+        <div class="demo-accounts">
+
+          <p class="eyebrow">CUENTAS DE PRUEBA</p>
+
+          <div class="demo-account">
+            <strong>Empresa</strong>
+            <span>empresa@fintara.demo</span>
+          </div>
+
+          <div class="demo-account">
+            <strong>Inversionista</strong>
+            <span>inversionista@fintara.demo</span>
+          </div>
+
+          <p class="demo-account-note">
+            Las credenciales son únicamente para fines académicos.
+          </p>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+      <span>
+        FINTARA
+        <span aria-hidden="true">·</span>
+        Proyecto académico
+      </span>
+
+      <span>Sin movimiento de dinero real</span>
+
+    </footer>
+
+  </body>
+</html>
