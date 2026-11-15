@@ -46,8 +46,8 @@ form.addEventListener("submit", (event) => {
   request.termMonths = Number(request.termMonths);
 
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(request));
-    showMessage("¡Listo! Tu solicitud de demostración quedó registrada en este navegador.");
+localStorage.setItem(STORAGE_KEY, JSON.stringify(request));
+window.location.href = "business-summary.html";
   } catch {
     showMessage(
       "No pudimos guardar la solicitud en este navegador. Revisa el espacio disponible o la configuración de almacenamiento e inténtalo de nuevo.",

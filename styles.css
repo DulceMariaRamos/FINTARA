@@ -975,3 +975,100 @@ legend span {
     gap: 4px;
   }
 }
+/* =========================================================
+   BUSINESS REQUEST SUMMARY
+   ========================================================= */
+
+.summary-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.8fr);
+  gap: 20px;
+  align-items: start;
+  padding-bottom: 56px;
+}
+
+.summary-card {
+  padding: 29px 32px 28px;
+  border: 1px solid #eaede8;
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: 0 8px 28px rgba(29, 56, 45, 0.035);
+}
+
+.summary-section {
+  padding: 23px 0;
+  border-top: 1px solid var(--line);
+}
+
+.summary-section h3 {
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.summary-item-full {
+  grid-column: 1 / -1;
+}
+
+.summary-item span {
+  color: #89958f;
+  font-size: 10px;
+}
+
+.summary-item strong {
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.summary-actions {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.summary-confirm-button {
+  width: 100%;
+}
+
+@media (max-width: 780px) {
+  .summary-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .summary-card {
+    padding: 23px 18px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-item-full {
+    grid-column: auto;
+  }
+
+  .summary-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-actions .secondary-button {
+    width: 100%;
+  }
+}

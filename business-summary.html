@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f3">
+
+    <title>FINTARA | Resumen de solicitud</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js" defer></script>
+    <script src="business-summary.js" defer></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+      <a class="brand" href="index.html" aria-label="FINTARA, inicio">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>fintara</span>
+      </a>
+
+      <span class="demo-label">
+        <span aria-hidden="true"></span>
+        Demo Mode
+      </span>
+
+    </header>
+
+
+    <main>
+
+      <section class="intro">
+
+        <p class="eyebrow">SOLICITUD DE FINANCIAMIENTO</p>
+
+        <h1>Revisa tu solicitud.</h1>
+
+        <p class="intro-copy">
+          Confirma que la información sea correcta antes de continuar.
+        </p>
+
+      </section>
+
+
+      <nav class="progress" aria-label="Avance del financiamiento">
+
+        <div class="progress-step progress-step-active">
+          <span class="step-number">1</span>
+          <span>Solicitud</span>
+        </div>
+
+        <span class="progress-line" aria-hidden="true"></span>
+
+        <div class="progress-step">
+          <span class="step-number">2</span>
+          <span>Fondeo</span>
+        </div>
+
+        <span class="progress-line" aria-hidden="true"></span>
+
+        <div class="progress-step">
+          <span class="step-number">3</span>
+          <span>Repago</span>
+        </div>
+
+      </nav>
+
+
+      <div class="summary-layout">
+
+        <section class="summary-card">
+
+          <div class="card-heading">
+            <div>
+              <p class="eyebrow">RESUMEN</p>
+              <h2>Tu solicitud</h2>
+              <p class="section-copy">
+                Estos son los datos que registraste.
+              </p>
+            </div>
+
+            <span class="lock-badge">
+              <span aria-hidden="true">●</span>
+              Datos de demostración
+            </span>
+          </div>
+
+
+          <div class="summary-section">
+
+            <h3>Tu negocio</h3>
+
+            <div class="summary-grid">
+
+              <div class="summary-item">
+                <span>Nombre del negocio</span>
+                <strong id="summary-business-name">—</strong>
+              </div>
+
+              <div class="summary-item">
+                <span>Persona propietaria</span>
+                <strong id="summary-owner-name">—</strong>
+              </div>
+
+              <div class="summary-item">
+                <span>Actividad</span>
+                <strong id="summary-business-activity">—</strong>
+              </div>
+
+              <div class="summary-item">
+                <span>Ubicación</span>
+                <strong id="summary-location">—</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="summary-section">
+
+            <h3>Financiamiento</h3>
+
+            <div class="summary-grid">
+
+              <div class="summary-item">
+                <span>Monto solicitado</span>
+                <strong id="summary-amount">—</strong>
+              </div>
+
+              <div class="summary-item">
+                <span>Plazo</span>
+                <strong id="summary-term">—</strong>
+              </div>
+
+              <div class="summary-item summary-item-full">
+                <span>Uso del financiamiento</span>
+                <strong id="summary-purpose">—</strong>
+              </div>
+
+              <div class="summary-item summary-item-full">
+                <span>Descripción del proyecto</span>
+                <strong id="summary-description">—</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div
+            id="summary-message"
+            class="form-message form-message-error"
+            role="alert"
+            hidden
+          ></div>
+
+
+          <div class="summary-actions">
+
+            <a class="secondary-button" href="business.html">
+              Editar información
+            </a>
+
+            <button
+              id="confirm-request-button"
+              class="submit-button summary-confirm-button"
+              type="button"
+            >
+              Confirmar solicitud
+              <span aria-hidden="true">→</span>
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <aside class="side-panel">
+
+          <p class="eyebrow">ANTES DE CONTINUAR</p>
+
+          <h2>Revisa los datos principales.</h2>
+
+          <p>
+            Confirma el monto, plazo y propósito antes de enviar la solicitud
+            a revisión.
+          </p>
+
+          <div class="side-divider"></div>
+
+          <div class="side-note">
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <p>
+              <strong>Demo Mode.</strong>
+              Esta solicitud no genera un financiamiento real.
+            </p>
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+      <span>
+        FINTARA
+        <span aria-hidden="true">·</span>
+        Proyecto académico
+      </span>
+
+      <span>Sin movimiento de dinero real</span>
+
+    </footer>
+
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        requireRole("business");
+      });
+    </script>
+
+  </body>
+</html>
