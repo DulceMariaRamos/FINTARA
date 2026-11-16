@@ -175,29 +175,6 @@ function createRepaymentSchedule(
     tableBody.appendChild(row);
   }
 }
-  const tableBody = document.querySelector(
-    "#repayment-table-body"
-  );
-
-  tableBody.innerHTML = "";
-
-  for (let paymentNumber = 1; paymentNumber <= termMonths; paymentNumber++) {
-
-    const row = document.createElement("tr");
-
-    row.innerHTML = `
-      <td>Pago ${paymentNumber}</td>
-      <td>${formatCurrency(monthlyPayment)}</td>
-      <td>
-        <span class="payment-status">
-          Pendiente
-        </span>
-      </td>
-    `;
-
-    tableBody.appendChild(row);
-  }
-}
 
 finishBusinessFlowButton.addEventListener(
   "click",
