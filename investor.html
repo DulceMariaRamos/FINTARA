@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f6f7f3">
 
-    <title>FINTARA | Para inversionistas</title>
+    <title>FINTARA | Oportunidades de inversión</title>
 
     <link rel="stylesheet" href="styles.css">
     <script src="auth.js" defer></script>
+    <script src="investor.js" defer></script>
   </head>
 
   <body>
@@ -30,19 +31,189 @@
 
     <main>
 
-      <section class="intro">
+      <section class="intro investor-intro">
 
-        <p class="eyebrow">
-          PARA INVERSIONISTAS
-        </p>
+        <p class="eyebrow">INVERSIONES</p>
 
-        <h1>
-          Explora oportunidades para invertir.
-        </h1>
+        <h1>Oportunidades para invertir.</h1>
 
         <p class="intro-copy">
-          Aquí construiremos el flujo de inversión del MVP de FINTARA.
+          Explora proyectos de financiamiento simulados y revisa sus
+          condiciones antes de tomar una decisión.
         </p>
+
+      </section>
+
+
+      <section class="investor-dashboard">
+
+        <div class="investor-dashboard-header">
+
+          <div>
+            <p class="eyebrow">OPORTUNIDADES DISPONIBLES</p>
+            <h2>Proyectos en fondeo</h2>
+          </div>
+
+          <div class="investor-available-balance">
+
+            <span>Capital demo disponible</span>
+
+            <strong>
+              $10,000 MXN
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <article class="investment-opportunity-card">
+
+          <div class="investment-card-top">
+
+            <div>
+
+              <div class="investment-tags">
+
+                <span class="investment-risk-badge">
+                  Riesgo moderado
+                </span>
+
+                <span class="investment-demo-badge">
+                  Proyecto demo
+                </span>
+
+              </div>
+
+
+              <p class="eyebrow">
+                FINANCIAMIENTO PYME
+              </p>
+
+              <h2>
+                Carpentry Supplies Demo Co.
+              </h2>
+
+              <p class="investment-description">
+                Empresa dedicada a la venta de insumos para carpintería
+                que busca ampliar su capacidad de almacén e inventario.
+              </p>
+
+            </div>
+
+
+            <div class="investment-return">
+
+              <span>
+                Rendimiento anual estimado
+              </span>
+
+              <strong>
+                15%
+              </strong>
+
+              <small>
+                No garantizado
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <div class="investment-metrics">
+
+            <div class="investment-metric">
+              <span>Meta de fondeo</span>
+              <strong>$100,000 MXN</strong>
+            </div>
+
+            <div class="investment-metric">
+              <span>Plazo</span>
+              <strong>12 meses</strong>
+            </div>
+
+            <div class="investment-metric">
+              <span>Tasa del financiamiento</span>
+              <strong>18% anual</strong>
+            </div>
+
+            <div class="investment-metric">
+              <span>Fondeado</span>
+              <strong>65%</strong>
+            </div>
+
+          </div>
+
+
+          <div class="investment-funding-progress">
+
+            <div class="investment-progress-header">
+
+              <span>
+                $65,000 fondeados de $100,000
+              </span>
+
+              <strong>
+                65%
+              </strong>
+
+            </div>
+
+            <div class="investment-progress-bar">
+
+              <div class="investment-progress-fill"></div>
+
+            </div>
+
+          </div>
+
+
+          <div class="investment-card-bottom">
+
+            <div class="investment-disclaimer">
+
+              <span class="note-icon" aria-hidden="true">i</span>
+
+              <p>
+                El rendimiento mostrado es una estimación académica y no está
+                garantizado. No se mueve dinero real en este demo.
+              </p>
+
+            </div>
+
+
+            <button
+              id="view-investment-button"
+              class="primary-button investment-view-button"
+              type="button"
+            >
+              Ver oportunidad
+              <span aria-hidden="true">→</span>
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <div class="investor-information-card">
+
+          <p class="eyebrow">
+            ANTES DE INVERTIR
+          </p>
+
+          <h3>
+            Revisa riesgo, plazo, rendimiento y comisiones.
+          </h3>
+
+          <p>
+            En una operación real, la evaluación del proyecto, los procesos
+            KYC/AML, la formalización y el movimiento de recursos serían
+            gestionados por la institución autorizada correspondiente.
+          </p>
+
+        </div>
 
       </section>
 
@@ -57,15 +228,16 @@
         Proyecto académico
       </span>
 
-      <span>
-        Sin movimiento de dinero real
-      </span>
+      <span>Sin movimiento de dinero real</span>
 
     </footer>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    requireRole("investor");
-  });
-</script>
+
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        requireRole("investor");
+      });
+    </script>
+
   </body>
-</html>;
+</html>
