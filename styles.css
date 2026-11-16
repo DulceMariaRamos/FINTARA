@@ -1536,3 +1536,21 @@ legend span {
     grid-template-columns: 1fr;
   }
 }
+.repayment-assumption-box {
+  margin-bottom: 26px;
+  padding: 16px;
+  border: 1px solid #dfe8df;
+  border-radius: 8px;
+  background: #f6f9f5;
+}
+
+.repayment-assumption-box p:not(.eyebrow) {
+  margin: 0 0 7px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.repayment-assumption-box p:last-child {
+  margin-bottom: 0;
+}
