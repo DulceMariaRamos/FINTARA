@@ -1975,3 +1975,250 @@ legend span {
     min-width: 0;
   }
 }
+/* =========================================================
+   INVESTOR PROJECT DETAILS
+   ========================================================= */
+
+.investment-risk-note,
+.project-risk-detail {
+  margin: -7px 0 15px;
+  color: #8a7861;
+  font-size: 9px;
+}
+
+.investor-project-intro {
+  padding-bottom: 34px;
+}
+
+.investor-project-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.75fr);
+  gap: 20px;
+  align-items: start;
+  padding-bottom: 56px;
+}
+
+.investor-project-card {
+  padding: 30px 32px;
+  border: 1px solid #e2e9e3;
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow: 0 10px 32px rgba(29, 56, 45, 0.045);
+}
+
+.project-detail-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  align-items: start;
+}
+
+.project-detail-header h2 {
+  margin-bottom: 9px;
+  font-size: 27px;
+}
+
+.project-return-card {
+  min-width: 180px;
+  padding: 19px;
+  border: 1px solid #dce9df;
+  border-radius: 11px;
+  background: #f4f8f4;
+  text-align: right;
+}
+
+.project-return-card span {
+  display: block;
+  margin-bottom: 7px;
+  color: #718078;
+  font-size: 9px;
+}
+
+.project-return-card strong {
+  display: block;
+  color: var(--green-dark);
+  font-size: 33px;
+  letter-spacing: -1px;
+}
+
+.project-return-card small {
+  color: #89958f;
+  font-size: 9px;
+}
+
+.project-detail-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.project-detail-metric {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fafbf8;
+}
+
+.project-detail-metric span {
+  display: block;
+  margin-bottom: 6px;
+  color: #89958f;
+  font-size: 9px;
+}
+
+.project-detail-metric strong {
+  color: var(--ink);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.project-detail-section {
+  padding: 23px 0;
+  border-top: 1px solid var(--line);
+}
+
+.project-detail-section h3 {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.project-detail-section > p:not(.eyebrow):not(.project-detail-note) {
+  max-width: 690px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.project-risk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.project-risk-grid > div {
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fafbf8;
+}
+
+.project-risk-grid span {
+  display: block;
+  margin-bottom: 5px;
+  color: #89958f;
+  font-size: 9px;
+}
+
+.project-risk-grid strong {
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.project-detail-note {
+  margin: 13px 0 0;
+  color: #89958f;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.project-risk-warning {
+  display: flex;
+  gap: 11px;
+  margin: 5px 0 24px;
+  padding: 15px;
+  border: 1px solid #eadcbf;
+  border-radius: 9px;
+  background: #fffaf0;
+}
+
+.project-risk-warning strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #6f572c;
+  font-size: 10px;
+}
+
+.project-risk-warning p {
+  margin: 0;
+  color: #826f4c;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.project-detail-actions {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+}
+
+.project-detail-actions .primary-button {
+  border: 0;
+}
+
+.investor-project-side {
+  position: sticky;
+  top: 20px;
+}
+
+.project-side-facts {
+  display: grid;
+  gap: 12px;
+}
+
+.project-side-facts div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.project-side-facts span {
+  color: #89958f;
+  font-size: 9px;
+}
+
+.project-side-facts strong {
+  color: var(--ink);
+  font-size: 10px;
+}
+
+@media (max-width: 780px) {
+  .investor-project-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .investor-project-side {
+    position: static;
+  }
+
+  .project-detail-header {
+    grid-template-columns: 1fr;
+  }
+
+  .project-return-card {
+    text-align: left;
+  }
+}
+
+@media (max-width: 540px) {
+  .investor-project-card {
+    padding: 22px 18px;
+  }
+
+  .project-detail-metrics,
+  .project-risk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-actions .secondary-button,
+  .project-detail-actions .primary-button {
+    width: 100%;
+  }
+}
