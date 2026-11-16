@@ -1,3 +1,312 @@
+<<<<<<< HEAD
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f3">
+
+    <title>FINTARA | Plan de pagos</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js" defer></script>
+    <script src="business-repayment.js" defer></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+      <a class="brand" href="index.html" aria-label="FINTARA, inicio">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>fintara</span>
+      </a>
+
+      <span class="demo-label">
+        <span aria-hidden="true"></span>
+        Demo Mode
+      </span>
+
+    </header>
+
+
+    <main>
+
+      <section class="intro">
+
+        <p class="eyebrow">PLAN DE PAGOS</p>
+
+        <h1>Así se vería tu repago.</h1>
+
+        <p class="intro-copy">
+  Consulta las condiciones y el calendario estimado de pagos del
+  financiamiento simulado.
+</p>
+
+      </section>
+
+
+      <nav class="progress" aria-label="Avance del financiamiento">
+
+        <div class="progress-step progress-step-active">
+          <span class="step-number">1</span>
+          <span>Solicitud</span>
+        </div>
+
+        <span class="progress-line" aria-hidden="true"></span>
+
+        <div class="progress-step progress-step-active">
+          <span class="step-number">2</span>
+          <span>Fondeo</span>
+        </div>
+
+        <span class="progress-line" aria-hidden="true"></span>
+
+        <div class="progress-step progress-step-active">
+          <span class="step-number">3</span>
+          <span>Repago</span>
+        </div>
+
+      </nav>
+
+
+      <div class="repayment-layout">
+
+        <section class="repayment-card">
+
+          <div class="repayment-header">
+
+            <div>
+              <p class="eyebrow">FINANCIAMIENTO SIMULADO</p>
+              <h2>Tu financiamiento</h2>
+            </div>
+
+            <span class="repayment-status">
+              Repago activo
+            </span>
+
+          </div>
+
+
+        <div class="repayment-metrics">
+
+  <div class="repayment-metric">
+    <span>Monto financiado</span>
+    <strong id="repayment-financed-amount">—</strong>
+  </div>
+
+  <div class="repayment-metric">
+    <span>Tasa anual demo</span>
+   <strong id="repayment-annual-rate">—</strong>
+  </div>
+
+  <div class="repayment-metric">
+    <span>Pago mensual estimado</span>
+    <strong id="repayment-monthly-payment">—</strong>
+  </div>
+
+  <div class="repayment-metric">
+    <span>Plazo</span>
+    <strong id="repayment-term">—</strong>
+  </div>
+
+  <div class="repayment-metric">
+    <span>Total estimado a pagar</span>
+    <strong id="repayment-total">—</strong>
+  </div>
+
+  <div class="repayment-metric">
+    <span>Comisión de plataforma</span>
+    <strong id="repayment-platform-fee">—</strong>
+  </div>
+
+</div>
+
+<div class="repayment-assumption-box">
+
+  <p class="eyebrow">SUPUESTO ACADÉMICO</p>
+
+  <p>
+    Para este demo, FINTARA utiliza una comisión de plataforma equivalente
+    al 4% del monto fondeado. Esta tarifa es un supuesto académico basado
+    en referencias del sector y no representa una comisión comercial vigente.
+  </p>
+
+  <p>
+    La comisión mostrada no incluye IVA.
+  </p>
+
+</div>
+          <div class="repayment-highlight">
+
+  <div class="repayment-highlight-main">
+
+    <p class="eyebrow">PRÓXIMO PAGO</p>
+
+    <strong
+      id="next-payment-amount"
+      class="next-payment-amount"
+    >
+      —
+    </strong>
+
+    <p
+      id="next-payment-date"
+      class="next-payment-date"
+    >
+      —
+    </p>
+
+  </div>
+
+
+  <div class="repayment-highlight-side">
+
+    <div>
+      <span>Pago</span>
+      <strong id="next-payment-number">1 de 12</strong>
+    </div>
+
+    <div>
+      <span>Estado</span>
+      <strong class="repayment-pending-text">
+        Pendiente
+      </strong>
+    </div>
+
+  </div>
+
+</div>
+<div class="repayment-progress-section">
+
+  <div class="repayment-progress-header">
+
+    <div>
+      <span>Progreso del repago</span>
+      <strong>0 de <span id="repayment-total-payments">12</span> pagos</strong>
+    </div>
+
+    <strong id="repayment-progress-percentage">
+      0%
+    </strong>
+
+  </div>
+
+  <div class="repayment-progress-bar">
+    <div
+      id="repayment-progress-fill"
+      class="repayment-progress-fill"
+    ></div>
+  </div>
+
+</div>
+
+
+          <div class="repayment-section">
+
+            <h3>Calendario de pagos</h3>
+
+            <div class="repayment-table-wrapper">
+
+              <table class="repayment-table">
+
+               <thead>
+  <tr>
+    <th>Pago</th>
+    <th>Fecha</th>
+    <th>Monto</th>
+    <th>Estado</th>
+  </tr>
+</thead>
+
+                <tbody id="repayment-table-body">
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+
+
+          <div class="funding-note">
+
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <p>
+  <strong>Demo Mode.</strong>
+  La tasa, comisión y calendario mostrados son supuestos académicos.
+  No existen cargos, transferencias ni obligaciones de pago reales.
+</p>
+
+          </div>
+
+
+          <button
+            id="finish-business-flow-button"
+            class="submit-button"
+            type="button"
+          >
+            Finalizar demo de empresa
+            <span aria-hidden="true">✓</span>
+          </button>
+
+        </section>
+
+
+        <aside class="side-panel">
+
+          <p class="eyebrow">REPAGO</p>
+
+          <h2 id="repayment-business-name">
+            Proyecto financiado
+          </h2>
+
+          <p id="repayment-purpose">
+            —
+          </p>
+
+          <div class="side-divider"></div>
+
+          <div class="side-note">
+
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <p>
+              En una operación real, la institución autorizada gestionaría
+              el cobro y la distribución de los pagos correspondientes.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+      <span>
+        FINTARA
+        <span aria-hidden="true">·</span>
+        Proyecto académico
+      </span>
+
+      <span>Sin movimiento de dinero real</span>
+
+    </footer>
+
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        requireRole("business");
+      });
+    </script>
+
+  </body>
+=======
 <!doctype html>
 <html lang="es">
   <head>
@@ -260,4 +569,5 @@
     </script>
 
   </body>
+>>>>>>> da88c5f5d898c9457d59468a40252411ef643a81
 </html>
