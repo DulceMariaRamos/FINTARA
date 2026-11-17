@@ -1,36 +1,27 @@
 const SESSION_KEY = "fintara.session";
 
-const DEMO_USERS = [
-  {
-    email: "empresa@fintara.demo",
-    password: "Empresa123",
-    role: "business",
-    displayName: "SME Owner A"
-  },
-  {
-    email: "inversionista@fintara.demo",
-    password: "Investor123",
-    role: "investor",
-    displayName: "Investor A"
-  }
-];
-
 const loginForm = document.querySelector("#login-form");
 const loginMessage = document.querySelector("#login-message");
 
 function showLoginError(message) {
+  if (!loginMessage) {
+    return;
+  }
+
   loginMessage.textContent = message;
   loginMessage.hidden = false;
 }
 
 function saveSession(user) {
   const session = {
-    email: user.email,
     role: user.role,
     displayName: user.displayName
   };
 
-  sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
+  sessionStorage.setItem(
+    SESSION_KEY,
+    JSON.stringify(session)
+  );
 }
 
 function redirectUser(user) {
@@ -44,30 +35,64 @@ function redirectUser(user) {
   }
 }
 
-loginForm.addEventListener("submit", (event) => {
-  event.preventDefault();
+if (loginForm) {
+  loginForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-  const formData = new FormData(loginForm);
+    if (loginMessage) {
+      loginMessage.hidden = true;
+    }
 
-  const email = String(formData.get("email")).trim().toLowerCase();
-  const password = String(formData.get("password"));
+    const formData = new FormData(loginForm);
 
-  const user = DEMO_USERS.find(
-    (demoUser) =>
-      demoUser.email === email &&
-      demoUser.password === password
-  );
+    const email = String(
+      formData.get("email") || ""
+    )
+      .trim()
+      .toLowerCase();
 
-  if (!user) {
-    showLoginError("Correo o contraseña incorrectos.");
-    return;
-  }
+    const password = String(
+      formData.get("password") || ""
+    );
 
-  saveSession(user);
-  redirectUser(user);
-});
+    try {
+      const response = await fetch(
+        "/.netlify/functions/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            email,
+            password
+          })
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        showLoginError(
+          result.message ||
+            "Correo o contraseña incorrectos."
+        );
+        return;
+      }
+
+      saveSession(result);
+      redirectUser(result);
+    } catch {
+      showLoginError(
+        "No fue posible iniciar sesión. Intenta de nuevo."
+      );
+    }
+  });
+}
+
 function getCurrentSession() {
-  const savedSession = sessionStorage.getItem(SESSION_KEY);
+  const savedSession =
+    sessionStorage.getItem(SESSION_KEY);
 
   if (!savedSession) {
     return null;
