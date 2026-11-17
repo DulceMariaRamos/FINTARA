@@ -2559,3 +2559,473 @@ legend span {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================================
+   INVESTOR CONFIRMATION
+   ========================================================= */
+
+.investor-confirmation-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.75fr);
+  gap: 20px;
+  align-items: start;
+  padding-bottom: 56px;
+}
+
+.investor-confirmation-card {
+  padding: 30px 32px;
+  border: 1px solid #e2e9e3;
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow: 0 10px 32px rgba(29, 56, 45, 0.045);
+}
+
+.confirmation-success {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 26px;
+}
+
+.confirmation-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: white;
+  background: var(--green);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.confirmation-success h2 {
+  margin: 0 0 6px;
+  font-size: 24px;
+}
+
+.confirmation-success p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.confirmation-investment-main {
+  margin-bottom: 23px;
+  padding: 22px;
+  border: 1px solid #dce9df;
+  border-radius: 10px;
+  background: #f4f8f4;
+}
+
+.confirmation-investment-main span,
+.confirmation-investment-main small {
+  display: block;
+  color: #718078;
+  font-size: 9px;
+}
+
+.confirmation-investment-main strong {
+  display: block;
+  margin: 7px 0 4px;
+  color: var(--green-dark);
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+.confirmation-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.confirmation-details-grid > div {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fafbf8;
+}
+
+.confirmation-details-grid span,
+.confirmation-details-grid small {
+  display: block;
+  color: #89958f;
+  font-size: 9px;
+}
+
+.confirmation-details-grid strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--ink);
+  font-size: 11px;
+}
+
+.confirmation-status {
+  color: var(--green-dark) !important;
+}
+
+.confirmation-estimate-box {
+  margin-bottom: 24px;
+  padding: 19px;
+  border: 1px solid #dce9df;
+  border-radius: 10px;
+  background: #f4f8f4;
+}
+
+.confirmation-estimate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.confirmation-estimate-grid span {
+  display: block;
+  margin-bottom: 5px;
+  color: #718078;
+  font-size: 9px;
+}
+
+.confirmation-estimate-grid strong {
+  color: var(--green-dark);
+  font-size: 13px;
+}
+
+.confirmation-next-step {
+  margin-bottom: 23px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.confirmation-next-step h3 {
+  margin: 0 0 7px;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.confirmation-next-step p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.confirmation-actions {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+}
+
+.confirmation-actions .primary-button {
+  border: 0;
+}
+
+@media (max-width: 780px) {
+  .investor-confirmation-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .investor-confirmation-card {
+    padding: 22px 18px;
+  }
+
+  .confirmation-details-grid,
+  .confirmation-estimate-grid,
+  .confirmation-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmation-actions .secondary-button,
+  .confirmation-actions .primary-button {
+    width: 100%;
+  }
+}
+/* =========================================================
+   INVESTOR PORTFOLIO
+   ========================================================= */
+
+.investor-portfolio-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.75fr);
+  gap: 20px;
+  align-items: start;
+  padding-bottom: 56px;
+}
+
+.investor-portfolio-main {
+  min-width: 0;
+}
+
+.portfolio-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.portfolio-overview-card {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+}
+
+.portfolio-overview-card span,
+.portfolio-overview-card small {
+  display: block;
+  color: #89958f;
+  font-size: 9px;
+}
+
+.portfolio-overview-card strong {
+  display: block;
+  margin: 6px 0 3px;
+  color: var(--green-dark);
+  font-size: 19px;
+}
+
+.portfolio-investment-card {
+  padding: 30px 32px;
+  border: 1px solid #e2e9e3;
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow: 0 10px 32px rgba(29, 56, 45, 0.045);
+}
+
+.portfolio-project-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 25px;
+}
+
+.portfolio-project-header h2 {
+  margin-bottom: 7px;
+  font-size: 25px;
+}
+
+.portfolio-project-header p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.portfolio-active-badge {
+  display: inline-flex;
+  padding: 6px 9px;
+  border: 1px solid #d3e4d7;
+  border-radius: 999px;
+  color: #285b43;
+  background: #f2f8f2;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.portfolio-return {
+  min-width: 170px;
+  padding: 18px;
+  border: 1px solid #dce9df;
+  border-radius: 10px;
+  background: #f4f8f4;
+  text-align: right;
+}
+
+.portfolio-return span,
+.portfolio-return small {
+  display: block;
+  color: #718078;
+  font-size: 9px;
+}
+
+.portfolio-return strong {
+  display: block;
+  margin: 5px 0 2px;
+  color: var(--green-dark);
+  font-size: 30px;
+}
+
+.portfolio-project-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.portfolio-project-metrics > div {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fafbf8;
+}
+
+.portfolio-project-metrics span,
+.portfolio-project-metrics small {
+  display: block;
+  color: #89958f;
+  font-size: 9px;
+}
+
+.portfolio-project-metrics strong {
+  display: block;
+  margin: 5px 0 2px;
+  color: var(--ink);
+  font-size: 11px;
+}
+
+.portfolio-next-payment {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 20px;
+  border: 1px solid #dce9df;
+  border-radius: 10px;
+  background: #f4f8f4;
+}
+
+.portfolio-next-payment > div:first-child > strong {
+  display: block;
+  margin: 3px 0 4px;
+  color: var(--green-dark);
+  font-size: 28px;
+}
+
+.portfolio-next-payment > div:first-child > span {
+  color: #718078;
+  font-size: 9px;
+}
+
+.portfolio-payment-number {
+  text-align: right;
+}
+
+.portfolio-payment-number span {
+  display: block;
+  margin-bottom: 4px;
+  color: #89958f;
+  font-size: 9px;
+}
+
+.portfolio-payment-number strong {
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.portfolio-progress-section {
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+
+.portfolio-progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.portfolio-progress-header strong {
+  color: var(--green-dark);
+}
+
+.portfolio-progress-bar {
+  height: 9px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e7ebe7;
+}
+
+.portfolio-progress-fill {
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+}
+
+.portfolio-progress-section p {
+  margin: 9px 0 0;
+  color: #89958f;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.portfolio-schedule-section {
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+
+.portfolio-section-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-end;
+  margin-bottom: 14px;
+}
+
+.portfolio-section-header h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.portfolio-section-header > span {
+  color: #89958f;
+  font-size: 9px;
+}
+
+.portfolio-actions {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.portfolio-actions .primary-button {
+  border: 0;
+}
+
+@media (max-width: 780px) {
+  .investor-portfolio-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-project-header {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-return {
+    text-align: left;
+  }
+
+  .portfolio-project-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .portfolio-investment-card {
+    padding: 22px 18px;
+  }
+
+  .portfolio-project-metrics,
+  .portfolio-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-next-payment {
+    display: grid;
+  }
+
+  .portfolio-payment-number {
+    text-align: left;
+  }
+}

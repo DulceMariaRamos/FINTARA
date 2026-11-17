@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f3">
+
+    <title>FINTARA | Mi portafolio</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js" defer></script>
+    <script src="investor-portfolio.js" defer></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+      <a class="brand" href="index.html" aria-label="FINTARA, inicio">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>fintara</span>
+      </a>
+
+      <span class="demo-label">
+        <span aria-hidden="true"></span>
+        Demo Mode
+      </span>
+
+    </header>
+
+
+    <main>
+
+      <section class="intro">
+
+        <p class="eyebrow">MI PORTAFOLIO</p>
+
+        <h1>Tu inversión en un solo lugar.</h1>
+
+        <p class="intro-copy">
+          Consulta el estado de tu inversión y los pagos estimados del proyecto.
+        </p>
+
+      </section>
+
+
+      <div class="investor-portfolio-layout">
+
+        <section class="investor-portfolio-main">
+
+          <div class="portfolio-overview">
+
+            <div class="portfolio-overview-card">
+
+              <span>Capital invertido</span>
+
+              <strong id="portfolio-invested-amount">
+                —
+              </strong>
+
+              <small>MXN</small>
+
+            </div>
+
+
+            <div class="portfolio-overview-card">
+
+              <span>Capital disponible</span>
+
+              <strong id="portfolio-available-balance">
+                —
+              </strong>
+
+              <small>MXN</small>
+
+            </div>
+
+
+            <div class="portfolio-overview-card">
+
+              <span>Total estimado a recibir</span>
+
+              <strong id="portfolio-total-return">
+                —
+              </strong>
+
+              <small>No garantizado</small>
+
+            </div>
+
+          </div>
+
+
+          <article class="portfolio-investment-card">
+
+            <div class="portfolio-project-header">
+
+              <div>
+
+                <div class="investment-tags">
+
+                  <span class="investment-risk-badge">
+                    Calificación demo A4
+                  </span>
+
+                  <span class="portfolio-active-badge">
+                    Activa
+                  </span>
+
+                </div>
+
+                <p class="eyebrow">
+                  INVERSIÓN ACTIVA
+                </p>
+
+                <h2>
+                  Carpentry Supplies Demo Co.
+                </h2>
+
+                <p>
+                  Financiamiento para ampliación de almacén e inventario.
+                </p>
+
+              </div>
+
+
+              <div class="portfolio-return">
+
+                <span>
+                  Rendimiento anual estimado
+                </span>
+
+                <strong>
+                  16%
+                </strong>
+
+                <small>
+                  No garantizado
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <div class="portfolio-project-metrics">
+
+              <div>
+                <span>Tu inversión</span>
+                <strong id="portfolio-project-investment">
+                  —
+                </strong>
+              </div>
+
+              <div>
+                <span>Plazo</span>
+                <strong>12 meses</strong>
+              </div>
+
+              <div>
+                <span>Comisión</span>
+                <strong>1%</strong>
+                <small>Sobre pagos recibidos</small>
+              </div>
+
+              <div>
+                <span>Pagos recibidos</span>
+                <strong>0 de 12</strong>
+              </div>
+
+            </div>
+
+
+            <div class="portfolio-next-payment">
+
+              <div>
+
+                <p class="eyebrow">
+                  PRÓXIMO PAGO ESTIMADO
+                </p>
+
+                <strong id="portfolio-next-payment">
+                  —
+                </strong>
+
+                <span id="portfolio-next-payment-date">
+                  —
+                </span>
+
+              </div>
+
+
+              <div class="portfolio-payment-number">
+
+                <span>Pago</span>
+
+                <strong>
+                  1 de 12
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <div class="portfolio-progress-section">
+
+              <div class="portfolio-progress-header">
+
+                <span>Progreso de pagos</span>
+
+                <strong>0%</strong>
+
+              </div>
+
+              <div class="portfolio-progress-bar">
+                <div class="portfolio-progress-fill"></div>
+              </div>
+
+              <p>
+                Los 12 pagos se muestran como pendientes porque este MVP no
+                procesa cobros ni transferencias reales.
+              </p>
+
+            </div>
+
+
+            <div class="portfolio-schedule-section">
+
+              <div class="portfolio-section-header">
+
+                <div>
+                  <p class="eyebrow">
+                    CALENDARIO ESTIMADO
+                  </p>
+
+                  <h3>
+                    Pagos de tu inversión
+                  </h3>
+                </div>
+
+                <span>
+                  12 meses
+                </span>
+
+              </div>
+
+
+              <div class="repayment-table-wrapper">
+
+                <table class="repayment-table">
+
+                  <thead>
+                    <tr>
+                      <th>Pago</th>
+                      <th>Fecha</th>
+                      <th>Monto estimado</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="portfolio-payment-table">
+                  </tbody>
+
+                </table>
+
+              </div>
+
+            </div>
+
+
+            <div class="project-risk-warning">
+
+              <span class="note-icon" aria-hidden="true">i</span>
+
+              <div>
+
+                <strong>
+                  Rendimiento estimado, no garantizado.
+                </strong>
+
+                <p>
+                  Retrasos, incumplimientos, impuestos u otras condiciones
+                  pueden modificar los pagos reales. Esta simulación no mueve
+                  dinero ni representa una inversión real.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="portfolio-actions">
+
+              <a
+                class="secondary-button"
+                href="investor.html"
+              >
+                Ver oportunidades
+              </a>
+
+              <button
+                id="finish-investor-flow-button"
+                class="primary-button"
+                type="button"
+              >
+                Finalizar demo
+                <span aria-hidden="true">→</span>
+              </button>
+
+            </div>
+
+          </article>
+
+        </section>
+
+
+        <aside class="side-panel">
+
+          <p class="eyebrow">
+            RESUMEN
+          </p>
+
+          <h2>
+            1 inversión activa
+          </h2>
+
+          <p>
+            Portafolio simulado del usuario Investor A.
+          </p>
+
+          <div class="side-divider"></div>
+
+          <div class="project-side-facts">
+
+            <div>
+              <span>Proyecto</span>
+              <strong>1</strong>
+            </div>
+
+            <div>
+              <span>Pagos recibidos</span>
+              <strong>0</strong>
+            </div>
+
+            <div>
+              <span>Pagos pendientes</span>
+              <strong>12</strong>
+            </div>
+
+            <div>
+              <span>Calificación</span>
+              <strong>A4 demo</strong>
+            </div>
+
+          </div>
+
+          <div class="side-divider"></div>
+
+          <div class="side-note">
+
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <p>
+              En una operación real, la institución autorizada sería
+              responsable de formalización, cobranza y movimiento de fondos.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+      <span>
+        FINTARA
+        <span aria-hidden="true">·</span>
+        Proyecto académico
+      </span>
+
+      <span>Sin movimiento de dinero real</span>
+
+    </footer>
+
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        requireRole("investor");
+      });
+    </script>
+
+  </body>
+</html>

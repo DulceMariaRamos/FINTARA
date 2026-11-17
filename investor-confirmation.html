@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f3">
+
+    <title>FINTARA | Inversión confirmada</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js" defer></script>
+    <script src="investor-confirmation.js" defer></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+      <a class="brand" href="index.html" aria-label="FINTARA, inicio">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>fintara</span>
+      </a>
+
+      <span class="demo-label">
+        <span aria-hidden="true"></span>
+        Demo Mode
+      </span>
+
+    </header>
+
+
+    <main>
+
+      <section class="intro">
+
+        <p class="eyebrow">INVERSIÓN CONFIRMADA</p>
+
+        <h1>Tu inversión demo fue registrada.</h1>
+
+        <p class="intro-copy">
+          La simulación se completó correctamente y ahora forma parte de tu
+          portafolio demo.
+        </p>
+
+      </section>
+
+
+      <div class="investor-confirmation-layout">
+
+        <section class="investor-confirmation-card">
+
+          <div class="confirmation-success">
+
+            <div class="confirmation-icon">
+              ✓
+            </div>
+
+            <div>
+              <p class="eyebrow">CONFIRMACIÓN</p>
+              <h2>Inversión simulada completada</h2>
+
+              <p>
+                Has invertido de forma simulada en
+                <strong>Carpentry Supplies Demo Co.</strong>
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="confirmation-investment-main">
+
+            <span>Monto invertido</span>
+
+            <strong id="confirmation-investment-amount">
+              —
+            </strong>
+
+            <small>
+              MXN · capital demo
+            </small>
+
+          </div>
+
+
+          <div class="confirmation-details-grid">
+
+            <div>
+              <span>Proyecto</span>
+              <strong>Carpentry Supplies Demo Co.</strong>
+            </div>
+
+            <div>
+              <span>Plazo</span>
+              <strong>12 meses</strong>
+            </div>
+
+            <div>
+              <span>Rendimiento estimado</span>
+              <strong>16% anual</strong>
+              <small>No garantizado</small>
+            </div>
+
+            <div>
+              <span>Comisión</span>
+              <strong>1%</strong>
+              <small>Sobre pagos recibidos</small>
+            </div>
+
+            <div>
+              <span>Calificación</span>
+              <strong>A4 demo</strong>
+            </div>
+
+            <div>
+              <span>Estado</span>
+              <strong class="confirmation-status">
+                Confirmada
+              </strong>
+            </div>
+
+          </div>
+
+
+          <div class="confirmation-estimate-box">
+
+            <p class="eyebrow">
+              PROYECCIÓN DEL DEMO
+            </p>
+
+            <div class="confirmation-estimate-grid">
+
+              <div>
+                <span>Pago mensual estimado</span>
+                <strong id="confirmation-monthly-receipt">
+                  —
+                </strong>
+              </div>
+
+              <div>
+                <span>Total estimado recibido</span>
+                <strong id="confirmation-total-receipt">
+                  —
+                </strong>
+              </div>
+
+              <div>
+                <span>Ganancia estimada</span>
+                <strong id="confirmation-estimated-gain">
+                  —
+                </strong>
+              </div>
+
+              <div>
+                <span>Capital demo restante</span>
+                <strong id="confirmation-remaining-balance">
+                  —
+                </strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="confirmation-next-step">
+
+            <p class="eyebrow">
+              ¿QUÉ SIGUE?
+            </p>
+
+            <h3>
+              Puedes revisar tu inversión y sus pagos estimados en tu portafolio.
+            </h3>
+
+            <p>
+              En una operación real, la institución autorizada correspondiente
+              gestionaría la formalización, movimiento de recursos y cobranza.
+            </p>
+
+          </div>
+
+
+          <div class="project-risk-warning">
+
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <div>
+              <strong>
+                Esto es una simulación académica.
+              </strong>
+
+              <p>
+                No se realizó ningún cargo ni transferencia de dinero real.
+                El rendimiento mostrado es estimado y no está garantizado.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="confirmation-actions">
+
+            <a
+              class="secondary-button"
+              href="investor.html"
+            >
+              Ver otras oportunidades
+            </a>
+
+            <button
+              id="view-portfolio-button"
+              class="primary-button"
+              type="button"
+            >
+              Ver mi portafolio
+              <span aria-hidden="true">→</span>
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <aside class="side-panel">
+
+          <p class="eyebrow">
+            TU CUENTA DEMO
+          </p>
+
+          <h2 id="confirmation-side-balance">
+            —
+          </h2>
+
+          <p>
+            Capital ficticio restante después de esta inversión.
+          </p>
+
+          <div class="side-divider"></div>
+
+          <div class="project-side-facts">
+
+            <div>
+              <span>Inversiones activas</span>
+              <strong>1</strong>
+            </div>
+
+            <div>
+              <span>Proyecto</span>
+              <strong>1</strong>
+            </div>
+
+            <div>
+              <span>Estado</span>
+              <strong>Confirmada</strong>
+            </div>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+      <span>
+        FINTARA
+        <span aria-hidden="true">·</span>
+        Proyecto académico
+      </span>
+
+      <span>Sin movimiento de dinero real</span>
+
+    </footer>
+
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        requireRole("investor");
+      });
+    </script>
+
+  </body>
+</html>
