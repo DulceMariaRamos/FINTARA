@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f3">
+
+    <title>FINTARA | Elegir inversión</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js" defer></script>
+    <script src="investor-amount.js" defer></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+      <a class="brand" href="index.html" aria-label="FINTARA, inicio">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>fintara</span>
+      </a>
+
+      <span class="demo-label">
+        <span aria-hidden="true"></span>
+        Demo Mode
+      </span>
+
+    </header>
+
+
+    <main>
+
+      <section class="intro">
+
+        <p class="eyebrow">MONTO DE INVERSIÓN</p>
+
+        <h1>Elige cuánto quieres invertir.</h1>
+
+        <p class="intro-copy">
+          Selecciona un monto dentro de tu capital demo disponible.
+        </p>
+
+      </section>
+
+
+      <div class="investor-amount-layout">
+
+        <section class="investor-amount-card">
+
+          <div class="investor-amount-header">
+
+            <div>
+              <p class="eyebrow">OPORTUNIDAD</p>
+              <h2>Carpentry Supplies Demo Co.</h2>
+            </div>
+
+            <span class="investment-risk-badge">
+              Calificación demo A4
+            </span>
+
+          </div>
+
+
+          <div class="investor-amount-summary">
+
+            <div>
+              <span>Rendimiento estimado</span>
+              <strong>16% anual</strong>
+              <small>No garantizado</small>
+            </div>
+
+            <div>
+              <span>Plazo</span>
+              <strong>12 meses</strong>
+            </div>
+
+            <div>
+              <span>Comisión</span>
+              <strong>1%</strong>
+              <small>Sobre pagos recibidos</small>
+            </div>
+
+          </div>
+
+
+          <div class="investor-amount-section">
+
+            <label for="investment-amount">
+              ¿Cuánto quieres invertir?
+            </label>
+
+            <div class="investment-amount-input">
+
+              <span>$</span>
+
+              <input
+                id="investment-amount"
+                type="number"
+                min="500"
+                max="10000"
+                step="500"
+                value="2500"
+              >
+
+              <span>MXN</span>
+
+            </div>
+
+            <p class="investment-amount-hint">
+              Mínimo demo: $500 MXN · Máximo disponible: $10,000 MXN
+            </p>
+
+          </div>
+
+
+          <div class="investment-quick-options">
+
+            <button type="button" data-amount="1000">
+              $1,000
+            </button>
+
+            <button type="button" data-amount="2500">
+              $2,500
+            </button>
+
+            <button type="button" data-amount="5000">
+              $5,000
+            </button>
+
+            <button type="button" data-amount="10000">
+              $10,000
+            </button>
+
+          </div>
+
+
+          <div class="investment-estimate-card">
+
+            <p class="eyebrow">
+              ESTIMACIÓN DEL DEMO
+            </p>
+
+            <div class="investment-estimate-grid">
+
+              <div>
+                <span>Inversión</span>
+                <strong id="selected-investment">
+                  $2,500 MXN
+                </strong>
+              </div>
+
+              <div>
+                <span>Capital demo restante</span>
+                <strong id="remaining-demo-balance">
+                  $7,500 MXN
+                </strong>
+              </div>
+
+              <div>
+                <span>Pago mensual estimado recibido</span>
+                <strong id="estimated-monthly-receipt">
+                  —
+                </strong>
+              </div>
+
+              <div>
+                <span>Total estimado recibido</span>
+                <strong id="estimated-total-receipt">
+                  —
+                </strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div
+            id="investment-amount-message"
+            class="form-message"
+            hidden
+          ></div>
+
+
+          <div class="funding-note">
+
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <p>
+              <strong>Demo Mode.</strong>
+              Los montos y rendimientos mostrados son estimaciones académicas.
+              No existe movimiento de dinero real ni rendimiento garantizado.
+            </p>
+
+          </div>
+
+
+          <div class="project-detail-actions">
+
+            <a
+              class="secondary-button"
+              href="investor-project.html"
+            >
+              ← Volver
+            </a>
+
+            <button
+              id="continue-investment-button"
+              class="primary-button"
+              type="button"
+            >
+              Revisar inversión
+              <span aria-hidden="true">→</span>
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <aside class="side-panel">
+
+          <p class="eyebrow">
+            TU CUENTA DEMO
+          </p>
+
+          <h2>
+            $10,000 MXN disponibles
+          </h2>
+
+          <p>
+            Capital ficticio para simular inversiones.
+          </p>
+
+          <div class="side-divider"></div>
+
+          <div class="side-note">
+
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <p>
+              En este demo puedes invertir hasta el capital disponible.
+              En una operación real existirían reglas regulatorias y de
+              diversificación adicionales.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+      <span>
+        FINTARA
+        <span aria-hidden="true">·</span>
+        Proyecto académico
+      </span>
+
+      <span>Sin movimiento de dinero real</span>
+
+    </footer>
+
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        requireRole("investor");
+      });
+    </script>
+
+  </body>
+</html>
