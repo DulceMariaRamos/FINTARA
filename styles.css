@@ -2398,3 +2398,164 @@ legend span {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================================
+   INVESTOR REVIEW
+   ========================================================= */
+
+.investor-review-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.75fr);
+  gap: 20px;
+  align-items: start;
+  padding-bottom: 56px;
+}
+
+.investor-review-card {
+  padding: 30px 32px;
+  border: 1px solid #e2e9e3;
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow: 0 10px 32px rgba(29, 56, 45, 0.045);
+}
+
+.investor-review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.investor-review-header h2 {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.investor-review-main {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.investor-review-amount,
+.investor-review-balance {
+  padding: 20px;
+  border: 1px solid #dce9df;
+  border-radius: 10px;
+  background: #f4f8f4;
+}
+
+.investor-review-main span,
+.investor-review-main small {
+  display: block;
+  color: #718078;
+  font-size: 9px;
+}
+
+.investor-review-main strong {
+  display: block;
+  margin: 6px 0 3px;
+  color: var(--green-dark);
+  font-size: 25px;
+  letter-spacing: -0.8px;
+}
+
+.investor-review-balance strong {
+  font-size: 19px;
+}
+
+.investor-review-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.investor-review-metrics > div {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fafbf8;
+}
+
+.investor-review-metrics span,
+.investor-review-metrics small {
+  display: block;
+  color: #89958f;
+  font-size: 9px;
+}
+
+.investor-review-metrics strong {
+  display: block;
+  margin: 5px 0 3px;
+  color: var(--ink);
+  font-size: 11px;
+}
+
+.investor-review-estimate {
+  margin-bottom: 23px;
+  padding: 19px;
+  border: 1px solid #dce9df;
+  border-radius: 10px;
+  background: #f4f8f4;
+}
+
+.investor-review-estimate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.investor-review-estimate-grid span {
+  display: block;
+  margin-bottom: 5px;
+  color: #718078;
+  font-size: 9px;
+}
+
+.investor-review-estimate-grid strong {
+  color: var(--green-dark);
+  font-size: 13px;
+}
+
+.investor-confirmation-box {
+  margin-bottom: 22px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fafbf8;
+}
+
+.investor-confirmation-box p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+@media (max-width: 780px) {
+  .investor-review-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .investor-review-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .investor-review-card {
+    padding: 22px 18px;
+  }
+
+  .investor-review-header {
+    display: grid;
+  }
+
+  .investor-review-main,
+  .investor-review-metrics,
+  .investor-review-estimate-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f3">
+
+    <title>FINTARA | Revisar inversión</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js" defer></script>
+    <script src="investor-review.js" defer></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+      <a class="brand" href="index.html" aria-label="FINTARA, inicio">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>fintara</span>
+      </a>
+
+      <span class="demo-label">
+        <span aria-hidden="true"></span>
+        Demo Mode
+      </span>
+
+    </header>
+
+
+    <main>
+
+      <section class="intro">
+
+        <p class="eyebrow">REVISAR INVERSIÓN</p>
+
+        <h1>Confirma los detalles antes de continuar.</h1>
+
+        <p class="intro-copy">
+          Revisa el monto, rendimiento estimado, comisión y riesgo de esta
+          inversión simulada.
+        </p>
+
+      </section>
+
+
+      <div class="investor-review-layout">
+
+        <section class="investor-review-card">
+
+          <div class="investor-review-header">
+
+            <div>
+              <p class="eyebrow">PROYECTO</p>
+              <h2>Carpentry Supplies Demo Co.</h2>
+            </div>
+
+            <span class="investment-risk-badge">
+              Calificación demo A4
+            </span>
+
+          </div>
+
+
+          <div class="investor-review-main">
+
+            <div class="investor-review-amount">
+
+              <span>Vas a invertir</span>
+
+              <strong id="review-investment-amount">
+                —
+              </strong>
+
+              <small>
+                MXN · capital demo
+              </small>
+
+            </div>
+
+            <div class="investor-review-balance">
+
+              <span>Capital restante</span>
+
+              <strong id="review-remaining-balance">
+                —
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="investor-review-metrics">
+
+            <div>
+              <span>Plazo</span>
+              <strong>12 meses</strong>
+            </div>
+
+            <div>
+              <span>Tasa del financiamiento</span>
+              <strong>18% anual</strong>
+            </div>
+
+            <div>
+              <span>Rendimiento estimado</span>
+              <strong>16% anual</strong>
+              <small>No garantizado</small>
+            </div>
+
+            <div>
+              <span>Comisión inversionista</span>
+              <strong>1%</strong>
+              <small>Sobre pagos recibidos</small>
+            </div>
+
+          </div>
+
+
+          <div class="investor-review-estimate">
+
+            <p class="eyebrow">
+              ESTIMACIÓN DEL DEMO
+            </p>
+
+            <div class="investor-review-estimate-grid">
+
+              <div>
+                <span>Pago mensual estimado</span>
+                <strong id="review-monthly-receipt">
+                  —
+                </strong>
+              </div>
+
+              <div>
+                <span>Total estimado recibido</span>
+                <strong id="review-total-receipt">
+                  —
+                </strong>
+              </div>
+
+              <div>
+                <span>Ganancia estimada</span>
+                <strong id="review-estimated-gain">
+                  —
+                </strong>
+              </div>
+
+              <div>
+                <span>Comisión estimada</span>
+                <strong id="review-estimated-fee">
+                  —
+                </strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="project-risk-warning">
+
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <div>
+              <strong>
+                Esta inversión implica riesgo.
+              </strong>
+
+              <p>
+                El rendimiento no está garantizado. Retrasos, incumplimientos,
+                impuestos u otras condiciones pueden modificar el resultado
+                final. Todos los datos de este MVP son ficticios.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="investor-confirmation-box">
+
+            <p class="eyebrow">
+              ANTES DE CONFIRMAR
+            </p>
+
+            <p>
+              Al continuar confirmas únicamente una inversión simulada.
+              No se realizará ningún cargo, transferencia ni movimiento
+              de dinero real.
+            </p>
+
+          </div>
+
+
+          <div
+            id="review-message"
+            class="form-message"
+            hidden
+          ></div>
+
+
+          <div class="project-detail-actions">
+
+            <a
+              class="secondary-button"
+              href="investor-amount.html"
+            >
+              ← Cambiar monto
+            </a>
+
+            <button
+              id="confirm-investment-button"
+              class="primary-button"
+              type="button"
+            >
+              Confirmar inversión demo
+              <span aria-hidden="true">→</span>
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <aside class="side-panel">
+
+          <p class="eyebrow">
+            RESUMEN
+          </p>
+
+          <h2>
+            Inversión simulada
+          </h2>
+
+          <p>
+            Revisa que los datos coincidan con tu decisión antes de confirmar.
+          </p>
+
+          <div class="side-divider"></div>
+
+          <div class="project-side-facts">
+
+            <div>
+              <span>Calificación</span>
+              <strong>A4 demo</strong>
+            </div>
+
+            <div>
+              <span>Rendimiento</span>
+              <strong>16%</strong>
+            </div>
+
+            <div>
+              <span>Plazo</span>
+              <strong>12 meses</strong>
+            </div>
+
+            <div>
+              <span>Comisión</span>
+              <strong>1%</strong>
+            </div>
+
+          </div>
+
+          <div class="side-divider"></div>
+
+          <div class="side-note">
+
+            <span class="note-icon" aria-hidden="true">i</span>
+
+            <p>
+              En una operación real, la institución autorizada gestionaría
+              la formalización, validación de identidad y movimiento de fondos.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+      <span>
+        FINTARA
+        <span aria-hidden="true">·</span>
+        Proyecto académico
+      </span>
+
+      <span>Sin movimiento de dinero real</span>
+
+    </footer>
+
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        requireRole("investor");
+      });
+    </script>
+
+  </body>
+</html>
